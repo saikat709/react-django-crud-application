@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --primary: rebeccapurple;
+    --secondary: cornflowerblue;
+    --navbar-bg: red;
+  }
+
+.dark{
+    --navbar-bg: green;
+}
+
+
+@layer components {
+    .nav{
+        @apply navbar navbar bg-slate-100 text-neutral-900 justify-center;
+    }
+
+    .icon-button{
+        @apply flex flex-row justify-center btn-outline btn btn-md px-4 text-green-300 hover:bg-red-100;
+    }
+
+    .table{
+        @apply mt-0 bg-slate-800 shadow-lg;
+    }
+
+    .table .checkbox {
+        @apply border-gray-200;
+    }
+
+    .table thead .checkbox {
+        @apply border-gray-600;
+    }
+    .table thead tr {
+        @apply font-bold text-lg bg-blue-100 text-gray-900 rounded-lg;
+    }
+
+    .table-row-inverse{
+        @apply bg-slate-200 bg-opacity-30 text-gray-300;
+    }
+
+}
+
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--secondary) var(--primary);
+  }
+  
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: var(--primary);
+    border-radius: 5px;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: var(--secondary);
+    border-radius: 14px;
+    border: 3px solid var(--primary);
+  }
+  
