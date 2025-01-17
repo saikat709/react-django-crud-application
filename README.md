@@ -1,6 +1,7 @@
 # Django & React CRUD Application
 
 This is a full-stack web application using Django for the backend and React with Vite for the frontend, structured in separate folders.
+Website is currently available: https://rdcrud.pythonanywhere.com/
 
 ![jsonModel](https://github.com/saikat709/react-django-crud-application/blob/main/images_for_github/jsonModel.png?raw=true)
 

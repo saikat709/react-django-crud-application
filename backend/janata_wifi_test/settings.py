@@ -4,7 +4,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-ky-jt9+x$k!5b6d&o8dl%s3+qk9(m+v#zhd^w&466*@!)zv1ws'
 
 DEBUG = True
-ALLOWED_HOSTS = [ '127.0.0.1', ]
+ALLOWED_HOSTS = [ '127.0.0.1', 'rdcrud.pythonanywhere.com' ]
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
