@@ -2,6 +2,8 @@
 
 This is a full-stack web application using Django for the backend and React with Vite for the frontend, structured in separate folders.
 
+![jsonModel](https://github.com/saikat709/react-django-crud-application/blob/main/images_for_github/jsonModel.png?raw=true)
+
 ## Project Structure
 ```
 .
@@ -81,8 +83,17 @@ cd ../frontend
 ```bash
 npm install
 ```
+---
+### Step 3: Environment Variables
+- Create a `.env` file in the `frontend` folders.
+- **Frontend (`frontend/.env`):**
+    ```plaintext
+    VITE_API_URL=http://127.0.0.1:8000/data/sqlModel/
+    ```
+- NB: data/jsonModel for the json files data directly. But will not be able to update the record.
+---
 
-### Step 3: Run the frontend development server
+### Step 4: Run the frontend development server
 ```bash
 npm run dev
 ```
@@ -110,20 +121,6 @@ The frontend server will start at: `http://localhost:5173/`
 
 ---
 
-## API Integration
-- Ensure you haved created the .env file in frontend folder.
-- It must contain `VITE_API_URL` 
----
-
-## Environment Variables
-- Create a `.env` file in the `frontend` folders.
-- **Frontend (`frontend/.env`):**
-    ```plaintext
-    VITE_API_URL=http://127.0.0.1:8000
-    ```
-
----
-
 ## Technologies Used
 - **Backend:** Django, Django REST Framework
 - **Frontend:** React, Vite
@@ -134,11 +131,17 @@ The frontend server will start at: `http://localhost:5173/`
 ![jsonModel](https://github.com/saikat709/react-django-crud-application/blob/main/images_for_github/jsonModel.png?raw=true)
 In this step i fetched the data from the json File from. 
 
-## SqlModel
-![sqlModelTable](https://github.com/saikat709/react-django-crud-application/blob/main/images_for_github/sqlModelTable.png?raw=true)
-![sqlModelEdit](https://github.com/saikat709/react-django-crud-application/blob/main/images_for_github/sqlModelEdit.png?raw=true)
-![sqlModelGraph](https://github.com/saikat709/react-django-crud-application/blob/main/images_for_github/sqlModel.Graph?raw=true)
-
 ## Migrating from JSONModel to SQLModel
 - I have created a custom command that read the json file and saved the content in sql model.
 - The command is `python manage.py json_to_sql`
+- This command reads the json file from the static folder and then loads it as json. Make save the instances using the serializer of the model.
+
+
+## SqlModel
+In this section, I moved to the sql model. And fetched dfata from database. This section holds the feature to add, delete or edit data.
+And graph of the data. Here, becase of the size of data is huge, I used only a portio of the data in the graph.
+
+Here are some images-
+![sqlModelTable](https://github.com/saikat709/react-django-crud-application/blob/main/images_for_github/sqlModelTable.png?raw=true)
+![sqlModelEdit](https://github.com/saikat709/react-django-crud-application/blob/main/images_for_github/sqlModelEdit.png?raw=true)
+![sqlModelGraph](https://github.com/saikat709/react-django-crud-application/blob/main/images_for_github/sqlModelGraph.png?raw=true)
