@@ -3,12 +3,14 @@ from django.urls import path, include
 from django.conf.urls.static import static 
 from django.conf import settings 
 
+from janata_wifi_test.views import home
 
 admin.site.site_title = "Crud Application with React and Django"
 admin.site.site_header = "Crud Application - React.js + Django"
 admin.site.index_title = "Crud Admin Home"
 
 urlpatterns = [
+    path('', home, name="home"),
     path('data/', include('stock_market.urls') ),
     path('admin/', admin.site.urls),
 ]

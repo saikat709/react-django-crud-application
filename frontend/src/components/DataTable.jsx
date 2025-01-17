@@ -7,7 +7,7 @@ import toast from "react-hot-toast";
 import AddOrEditStockData from "./AddOrEditStockData";
 import Loader from "./Loader";
 
-const stockDataModelUrl = "http://127.0.0.1:8000/data/sqlModel/";
+const stockDataModelUrl = import.meta.env.VITE_API_URL;
 
 export default function DataTable( { data, isSelectable, onRemoveRow, onDataAdd } ){
 

@@ -4,8 +4,7 @@ import { Link } from "react-router-dom";
 import Loader from "../components/Loader";
 
 // const dataFetchUrl = "http://127.0.0.1:8000/data/jsonModel/";
-const stockDataModelUrl = "http://127.0.0.1:8000/data/sqlModel/";
-
+const stockDataModelUrl = import.meta.env.VITE_API_URL;
 
 export default function Homepage(){
     const [ data, setData ] = useState(null);

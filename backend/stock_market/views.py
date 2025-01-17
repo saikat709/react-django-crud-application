@@ -5,6 +5,7 @@ from rest_framework import viewsets, response, status
 from .models import StockMarketData
 from .serializers import StockDataSerializer
 
+
 def get_stock_data(request):
     with open("static/stock_market_data.json") as f:
         data = json.load(f )

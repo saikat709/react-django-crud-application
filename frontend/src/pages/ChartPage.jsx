@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import DataChart from "../components/DataChart";
 import { Link } from "react-router-dom";
 
-const stockDataModelUrl = "http://127.0.0.1:8000/data/sqlModel/";
+const stockDataModelUrl = import.meta.env.VITE_API_URL;
 
 export default function ChartPage(){
     const [ data, setData ] = useState(null);
