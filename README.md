@@ -117,7 +117,7 @@ The frontend server will start at: `http://localhost:5173/`
 
 - The backend will be available at `http://127.0.0.1:8000/`
 - The frontend will be available at `http://localhost:5173/`
-- In final commit: frontend will be available with backend `http://localhost:5173/`
+- In final commit: frontend will be available at ( in the backend url ): `http://127.0.0.1:8000/`
 
 ---
 
