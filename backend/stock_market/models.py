@@ -5,9 +5,9 @@ class StockMarketData(models.Model):
     trade_code = models.CharField(max_length=50)
     high       = models.FloatField()
     low        = models.FloatField()
-    open_a     = models.FloatField()
+    open_a     = models.FloatField( db_column='open' )
     close      = models.FloatField()
-    volume     = models.IntegerField()
+    volume     = models.FloatField()
     
     class Meta:
         verbose_name = "StockMarketData"

@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     "corsheaders",
     'django.contrib.staticfiles',
 
-    # 'rest_framework',
+    'rest_framework',
     'stock_market',
 ]
 
@@ -99,6 +99,14 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': None,
+    # 'PAGE_SIZE': 100,
+    'DEFAULT_RENDERER_CLASSES': [
+        'rest_framework.renderers.JSONRenderer',
+    ]
+}
 
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'

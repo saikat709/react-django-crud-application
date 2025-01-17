@@ -36,13 +36,13 @@ export default function MenuAppBar() {
                 <div className="flex-1">
                     <a className="btn btn-ghost text-xl">CRUD Application</a>
                 </div>
-                {/* <Link to={ pathname == '/' ?  '/graph' : '/' } className="icon-button">
+                <Link to={ pathname == '/' ?  '/graph' : '/' } className="icon-button">
                     { pathname == '/' ? <BsGraphUp  size={30} className='inline-block text-black' /> 
                     : <FaHome size={30} className='inline-block text-black' />}
                     <button className="text-black">
                         { pathname == '/' ? "Graph" : "Home" }
                     </button>
-                </Link> */}
+                </Link>
             </div>
         </div>
     );
